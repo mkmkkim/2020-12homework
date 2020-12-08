@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/> 
+<meta name="Author" content="mkkim">
+<title> Save Favorite Fruits </title>
+<link rel="stylesheet" type="text/css" href="style-size.css"/>
+<link rel="stylesheet" type="text/css" href="style-layout.css"/>
+<link rel="stylesheet" type="text/css" href="style-presentation.css"/>
+<link rel="stylesheet" type="text/css" href="search.css"/>
+
+<script type="text/javascript">
+    function save_favorite() {
+        var localStorage = window.localStorage;
+        if (!localStorage) {
+            // local storage is not supported by this browser.
+            // do nothing
+        }
+        else {
+            dom = document.getElementsByTagName("span");
+            var j = 0;
+            for(i=0;i<dom.length;i++) {
+				if(dom[i].firstChild.checked == true)	{
+					localStorage[j] = dom[i].innerText;	
+					j++;
+                }
+            }
+			localStorage.numFavorites = j; 
+        }
+    }
+</script>
+
+</head>
+<body class="fruitlist bgimg">
+  <form style="font-size: 14px;">
+      <span><input type="checkbox"/>
+        사과 Apple 아지농원 | 20,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        포도 Grape 생능농원 | 9,900원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        딸기 strawberry 생능농원 | 25,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        복숭아 Peach 생능농원 | 20,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        배 Pear 아지농원 | 20,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        자두 Plum 생능농원 | 10,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        파인애플 Pineapple DOLE | 30,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        멜론 Melon DOLE| 45,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        블루베리 Blueberry Great Plains | 28,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        체리 Cherry DOLE | 39,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        자몽 Grape fruit Great Plains | 30,000원(1kg)<br/></span>
+      <span><input type="checkbox"/>
+        망고 mango DOLE | 47,000원(1kg)<br/></span>
+  </form>
+  <br/><br/>
+  <button onclick="save_favorite();"> 관심물품 등록 </button>
+  <script type="text/javascript" src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-size: 0.75em;
+    line-height: 1.3em;
+}
+@font-face {font-family: "bmjua";src: url("BMJUA_ttf.ttf") format('truetype');}
+
+img {
+    border:none;
+}
+  
+.wrap {
+    text-align:left;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+}
+
+header .right a:hover {
+    color: rgb(0, 255, 191);
+}
+
+input {
+    color:rgb(0, 0, 0);
+}
+
+nav {
+    background-color: rgb(255, 255, 255);
+    font-family: "bmjua";
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+    
+nav ul {
+    list-style:none;
+}
+
+nav a {
+    text-decoration:none;
+    color:#000000;
+    border-style: hidden hidden solid hidden;
+    border-color: transparent;
+}
+
+nav a:hover {
+    color:#ff9f9f;    
+    border-color: rgb(255, 135, 135);
+}
+
+footer #copyright {
+    font-family: "bmjua";
+}
+
+footer #SNS a {
+    text-decoration: none;
+}
+
+#login, #signup, #order {
+    background-color: #ffffff;
+}
+
+#order table {
+    border-collapse:collapse;
+}
+
+#order table td, th{
+    font-family: '맑은고딕';
+    font-size: 14px;
+    text-align: center;
+}
+
+#order table input {
+    background-color: transparent;
+}
+
+#order table td, th, tr{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.fruitlist {
+    background-color: #f0f0f0;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;	
+}
+.bgimg{
+    background-image: 
+    url(https://image.freepik.com/free-photo/grungy-white-background-of-natural-cement-or-stone-old-texture-as-a-retro-pattern-wall-conceptual-wall-banner-grunge-material-or-construction_1258-21330.jpg);
+}
+
+.fruit {
+	background-image: 
+    url("http://www.livingpick.com/shopimages/partysale/0450070001912.jpg?1597108672");
+    width: 500px; height: 400px;
+}
+.fruitlist ul li {
+    font-family: '맑은고딕';
+	font-size: 14px;
+    list-style-type: none;
+}
+.fruitlist p {
+    font-family: 'bmjua';
+    margin-left: 40%;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px gray;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    font-family: 'bmjua';
+    font-size: 15px;
+    padding: 5px;
+}

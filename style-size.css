@@ -1,0 +1,46 @@
+.wrap {
+    width:700px;
+    min-height:600px;
+}
+ 
+header {
+    height: 80px;
+}
+
+nav {
+    width: 700px;
+}
+    
+nav a {
+    height:20px;
+}
+
+footer {
+    height:70px;
+}
+
+#login fieldset span {
+    width: 150px;
+}
+
+#signup fieldset span {
+    width: 150px;
+}
+ 
+#order table td, th{
+    width: 150px;
+    height: 30px;
+}
+
+.fruitlist {
+    height: 462px;
+}
+
+.fruitlist ul li {
+    width: 150px;
+    height: 180px;
+}
+
+.fruitlist ul li img {
+    height: 120px;
+}

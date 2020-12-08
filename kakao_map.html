@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bd15d3849289bd4700f606146a9df57b"></script>
+
+	<script>
+	<!--
+		// 지도에 추가된 지도타입정보를 가지고 있을 변수입니다.
+		var currentTypeId;
+		var mapType;
+	    function showCurrentLocation() {
+		    if (navigator.geolocation) {
+			    navigator.geolocation.getCurrentPosition(getPosition);
+	        }
+		    else {
+			    document.write("This web browser dos not support geolocation.");
+	        }
+		}
+
+	    function getPosition(position) {
+			var now = new Date(position.timestamp);  // 현재 날짜와 시간
+			var lat = position.coords.latitude; // 위도
+			var lon = position.coords.longitude; // 경도
+			var acc = position.coords.accuracy; // 정확도
+
+			// 위도와 경도의 소수점 이하 자리가 너무 길어 유효 숫자 5자리로 짜름
+			currentLat = lat.toPrecision(5); 
+			currentLng = lon.toPrecision(5); 
+
+			var text = "현재 시간: " + now.toUTCString() + "<br/>";
+			text += "현재 위치 (위도: " + currentLat + "°, 경도: " + currentLng + "°)   ";
+			text += "정확도: " + acc + "m<br/>";
+
+			document.getElementById("msg").innerHTML = text;  // 지도 정보 보여주기
+
+			var mapContainer = document.getElementById('map'),  
+		    mapOption = { 
+				center: new kakao.maps.LatLng(lat, lon),
+				level: 7 // 지도의 확대 레벨
+		    };
+
+			var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+			// 마커가 표시될 위치입니다 
+			var markerPosition  = new kakao.maps.LatLng(lat, lon); 
+
+			// 마커를 생성합니다
+			var marker = new kakao.maps.Marker({
+			    position: markerPosition
+			});
+
+			// 마커가 지도 위에 표시되도록 설정합니다
+			marker.setMap(map);
+
+			// 지도종류
+			var changeMaptype;
+		    // maptype에 따라 지도에 추가할 지도타입을 결정합니다
+			switch (mapType)
+			{
+				case 'traffic':// 교통정보 지도타입
+				    changeMaptype = kakao.maps.MapTypeId.TRAFFIC;    break;
+				case 'roadview':// 로드뷰 도로정보 지도타입
+				    changeMaptype = kakao.maps.MapTypeId.ROADVIEW;    break;
+				case 'terrain':        // 지형정보 지도타입
+			        changeMaptype = kakao.maps.MapTypeId.TERRAIN;   break; 
+				case 'use_district':         // 지적편집도 지도타입
+				    changeMaptype = kakao.maps.MapTypeId.USE_DISTRICT; break;
+		    }
+    
+			// 이미 등록된 지도 타입이 있으면 제거합니다
+			if (currentTypeId)  map.removeOverlayMapTypeId(currentTypeId);    
+    
+			// maptype에 해당하는 지도타입을 지도에 추가합니다
+		    map.addOverlayMapTypeId(changeMaptype);
+    
+			// 지도에 추가된 타입정보를 갱신합니다
+			currentTypeId = changeMaptype;        
+	}
+	-->
+	</script>
+
+</head>
+
+<body onload="showCurrentLocation();">
+    <button onclick="mapType=''; showCurrentLocation();">기본지도</button>
+    <button onclick="mapType='traffic'; showCurrentLocation();">교통정보</button>
+    <button onclick="mapType='roadview'; showCurrentLocation();">로드뷰</button>
+    <button onclick="mapType='terrain'; showCurrentLocation();">지형정보</button>
+    <button onclick="mapType='use_district'; showCurrentLocation();">지적편집도</button>
+
+	<div id="map" style="width:600px;height:450px;"></div>
+	<div id="msg">이곳에  위치 정보 출력</div>
+</body>
+</html>
+
+

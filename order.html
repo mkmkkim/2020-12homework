@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/> 
+<meta name="Author" content="mkkim">
+<title> Order Page </title>
+<link rel="stylesheet" type="text/css" href="style-size.css"/>
+<link rel="stylesheet" type="text/css" href="style-layout.css"/>
+<link rel="stylesheet" type="text/css" href="style-presentation.css"/>
+<link rel="stylesheet" type="text/css" href="search.css"/>
+
+</head>
+
+<body id="order">
+<form action="">
+    <table>
+        <tr> <th> 과일 이름 </td> <th> 가격 </th> <th> 수량(1kg) </th> <th> 합계 </th> </tr>
+        <tr>
+            <td> 사과 </td> <td> 20,000원 </td>
+            <td> <input id="fruit1" type="text" size="2" value="0"
+               onclick="this.select();"  /> </td> 
+            <td> <input id="fruit1Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 포도 </td> <td> 9,900원 </td>
+            <td> <input id="fruit2" type="text" size="2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit2Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 딸기 </td> <td> 25,000원 </td>
+            <td> <input id="fruit3" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit3Total" type="text" size="6" value="0"/> 원</td>
+            </tr>
+        <tr>
+            <td> 복숭아 </td> <td> 20,000원 </td>
+            <td> <input id="fruit4" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit4Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 배 </td> <td> 20,000원 </td>
+            <td> <input id="fruit5" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit5Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 자두 </td> <td> 10,000원 </td>
+            <td> <input id="fruit6" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit6Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 파인애플 </td> <td> 30,000원 </td>
+            <td> <input id="fruit7" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit7Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 멜론 </td> <td> 45,000원 </td>
+            <td> <input id="fruit8" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit8Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 블루베리 </td> <td> 28,000원 </td>
+            <td> <input id="fruit9" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit9Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 체리 </td> <td> 39,000원 </td>
+            <td> <input id="fruit10" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit10Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 자몽 </td> <td> 30,000원 </td>
+            <td> <input id="fruit11" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit11Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+        <tr>
+            <td> 망고 </td> <td> 47,000원 </td>
+            <td> <input id="fruit12" type="text" size= "2" value="0"
+               onclick="this.select();"  /> </td>
+            <td> <input id="fruit12Total" type="text" size="6" value="0"/> 원</td>
+        </tr>
+        <tr>
+            <td> 합계 </td> <td> &nbsp; </td>
+            <td> <input id="totalNumber" type="text" size= "2" value="0"/> </td>
+            <td> <input id="totalPrice" type="text" size="6" value="0"/> 원</td>
+        </tr>
+    </table> <br />
+    <input type="button" style= "background-color: rgb(255, 255, 255);
+    " value="합계계산" onclick="updateAll();" />
+    <input type="reset" style= "background-color: rgb(255, 255, 255);
+    " value="초기화"/>
+</form>
+
+<script type="text/javascript">
+function updateAll() {
+    var n1 = document.getElementById("fruit1").value;
+    var n2 = document.getElementById("fruit2").value;
+    var n3 = document.getElementById("fruit3").value;
+    var n4 = document.getElementById("fruit4").value;
+    var n5 = document.getElementById("fruit5").value;
+    var n6 = document.getElementById("fruit6").value;
+    var n7 = document.getElementById("fruit7").value;
+    var n8 = document.getElementById("fruit8").value;
+    var n9 = document.getElementById("fruit9").value;
+    var n10 = document.getElementById("fruit10").value;
+    var n11 = document.getElementById("fruit11").value;
+    var n12 = document.getElementById("fruit12").value;
+
+    var p1 = 20000 * n1;
+    var p2 = 9900 * n2;
+    var p3 = 25000 * n3;
+    var p4 = 20000 * n4;
+    var p5 = 20000 * n5;
+    var p6 = 10000 * n6;
+    var p7 = 30000 * n7;
+    var p8 = 45000 * n8;
+    var p9 = 28000 * n9;
+    var p10 = 39000 * n10;
+    var p11 = 30000 * n11;
+    var p12 = 47000 * n12;
+
+    document.getElementById("fruit1Total").value = p1;
+    document.getElementById("fruit2Total").value = p2;
+    document.getElementById("fruit3Total").value = p3;
+    document.getElementById("fruit4Total").value = p4;
+    document.getElementById("fruit5Total").value = p5;
+    document.getElementById("fruit6Total").value = p6;
+    document.getElementById("fruit7Total").value = p7;
+    document.getElementById("fruit8Total").value = p8;
+    document.getElementById("fruit9Total").value = p9;
+    document.getElementById("fruit10Total").value = p10;
+    document.getElementById("fruit11Total").value = p11;
+    document.getElementById("fruit12Total").value = p12;
+
+	// 전체 수량 계산하기
+    var totalNumber = parseInt(n1) + parseInt(n2) + parseInt(n3) + parseInt(n4) + parseInt(n5) + parseInt(n6)
+     + parseInt(n7) + parseInt(n8) + parseInt(n9) + parseInt(n10) + parseInt(n11) + parseInt(n12);
+    document.getElementById("totalNumber").value = totalNumber;
+
+	// 전체 가격 계산하기
+	var totalPrice = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10 + p11 + p12;
+    document.getElementById("totalPrice").value = totalPrice;
+}
+</script>
+<script type="text/javascript" src="search.js"></script>
+</body>
+</html>
