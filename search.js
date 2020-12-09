@@ -5,14 +5,44 @@ function enterSearch() {
 }
 function myFunction() {
     var x = document.getElementById("texts").value;
-    if(x=="딸기"||x=="사과"||x=="포도"||
-    x=="복숭아"||x=="배"||x=="자두")
+    if(x=="딸기"){
+        window.location.href = "domestic_fruits.html";
+    }
+    else if(x=="사과"){
+        window.location.href = "domestic_fruits.html";
+    }
+    else if(x=="포도"){
+        window.location.href = "domestic_fruits.html";
+    }
+    else if(x=="복숭아"){
+        window.location.href = "domestic_fruits.html";
+    }
+    else if(x=="배"){
+        window.location.href = "domestic_fruits.html";
+    }
+    else if(x=="자두")
     {
         window.location.href = "domestic_fruits.html";
     }
-    if(x=="파인애플"||x=="블루베리"||x=="멜론"||x=="체리"||
-    x=="자몽"||x=="망고")
-    {
+    else{
+        window.location.href = "not_found.html";
+    }
+    if(x=="파인애플"){
+        window.location.href = "foreign_fruits.html";
+    }
+    else if(x=="블루베리"){
+        window.location.href = "foreign_fruits.html";
+    }
+    else if(x=="멜론"){
+        window.location.href = "foreign_fruits.html";
+    }
+    else if(x=="체리"){
+        window.location.href = "foreign_fruits.html";
+    }
+    else if(x=="자몽"){
+        window.location.href = "foreign_fruits.html";
+    }
+    else if(x=="망고"){
         window.location.href = "foreign_fruits.html";
     }
     else{
