@@ -5,44 +5,44 @@ function enterSearch() {
 }
 function myFunction() {
     var x = document.getElementById("texts").value;
-    if(x=="딸기"){
+
+    if (x=="apple"){
         window.location.href = "domestic_fruits.html";
     }
-    else if(x=="사과"){
+    else if(x=="strawberry"){
         window.location.href = "domestic_fruits.html";
     }
-    else if(x=="포도"){
+    else if(x=="grape"){
         window.location.href = "domestic_fruits.html";
     }
-    else if(x=="복숭아"){
+    else if(x=="pear"){
         window.location.href = "domestic_fruits.html";
     }
-    else if(x=="배"){
+    else if(x=="plum"){
         window.location.href = "domestic_fruits.html";
     }
-    else if(x=="자두")
-    {
+    else if(x=="peach"){
         window.location.href = "domestic_fruits.html";
     }
     else{
         window.location.href = "not_found.html";
     }
-    if(x=="파인애플"){
+    if(x=="pineapple"){
         window.location.href = "foreign_fruits.html";
     }
-    else if(x=="블루베리"){
+    else if(x=="blueberry"){
         window.location.href = "foreign_fruits.html";
     }
-    else if(x=="멜론"){
+    else if(x=="melon"){
         window.location.href = "foreign_fruits.html";
     }
-    else if(x=="체리"){
+    else if(x=="cherry"){
         window.location.href = "foreign_fruits.html";
     }
-    else if(x=="자몽"){
+    else if(x=="grapefruit"){
         window.location.href = "foreign_fruits.html";
     }
-    else if(x=="망고"){
+    else if(x=="mango"){
         window.location.href = "foreign_fruits.html";
     }
     else{
