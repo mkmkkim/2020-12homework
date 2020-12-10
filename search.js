@@ -33,7 +33,7 @@ else if (x == "blueberry") {
   frame.setAttribute("src", "foreign_fruits.html");
 }
 else if (x == "melon") {
-  frame.setAttribute("src", "foreign_fruits.html");
+  frame.setAttribute("src", "foreign_fruitss.html");
 }
 else if (x == "cherry") {
   frame.setAttribute("src", "foreign_fruits.html");
