@@ -1,4 +1,5 @@
 body {
+    cursor: url(/cursor.cur);
     background-color: rgb(255, 255, 255);
     font-size: 0.75em;
     line-height: 1.3em;
