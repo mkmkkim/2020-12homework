@@ -22,11 +22,11 @@
 </header>
 <form>
     <input type="button" style= "float: right; font-family: 'bmjua'; background-color: rgb(255, 255, 255);padding: 9px;"
-     value="검색" onclick="myFunction();"/>
-    <span class='search_window'>
+     value="검색" onclick="myFunction(event);"/>
+    <span class="search_window">
     <input id="texts" type="text" style="float: rigth;"
     class="input_text" name="search"/></span>
-    </form>
+</form>
 <nav>
     <ul>
         <li><a href="domestic_fruits.html" target="display_area">국내 과일</a></li>
@@ -39,9 +39,15 @@
 <hr/>
 
 <article class="left">
-    <iframe name="display_area" src="images/fruit.jpg" seamless="true"
-            width="600px" height="500px"></iframe>
-</article>
+    <iframe
+      id="frame"
+      name="display_area"
+      src="images/fruit.jpg"
+      seamless="true"
+      width="600px"
+      height="500px"
+    ></iframe>
+  </article>
 
 <aside class="right">
     <button id="save_favorite" style="width:85px" disabled>찜하기</button><br/>
