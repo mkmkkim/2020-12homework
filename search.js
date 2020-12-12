@@ -8,7 +8,7 @@ function myFunction(event) {
   var x = document.getElementById("texts").value;
   var frame = document.getElementById("frame");
     
-if (x == "apple") {
+if (x == "apple") {//setAttribute(name,value) 객체의 속성을 가져옴.
   frame.setAttribute("src", "domestic_fruits.html");
 }
 else if (x == "strawberry"){

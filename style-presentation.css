@@ -1,5 +1,7 @@
+html{/*색상을 변수에 넣기*/
+    --color-texta: rgb(255, 132, 132);
+}
 body {
-    cursor: url("https://placeimg.com/50/50/any"), auto;
     background-color: rgb(255, 255, 255);
     font-size: 0.75em;
     line-height: 1.3em;
@@ -14,7 +16,12 @@ img {
     text-align:left;
     background-color: rgb(255, 255, 255);
 }
-
+/*커스텀 커서 스타일 정의*/
+.cursor {    /*z-index: 요소의 수직 위치 정하는 속성*/
+    width: 3rem; height: 3rem; border: 2px solid var(--color-texta);
+    border-radius: 50%; position: absolute; z-index: 1000;transform: translate(-50%, -50%);
+    pointer-events: none; transition-property: background, transform;
+}
 a {
     text-decoration: none;
 }

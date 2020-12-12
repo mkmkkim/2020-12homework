@@ -44,3 +44,10 @@ function showMap() {
     dom = document.getElementsByName("display_area");
     dom[0].src = "kakao_map.html";
 }
+//마우스 동작. querySelector로 css선택자를 반환
+let mouseCursor = document.querySelector(".cursor");
+window.addEventListener("mousemove", cursor);
+function cursor(e) {
+    mouseCursor.style.left = e.pageX + "px";
+    mouseCursor.style.top = e.pageY + "px";
+}
